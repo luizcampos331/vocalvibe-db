@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  vocalvibe:
+    image: postgres
+    container_name: vocalvibe
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=vocalvibe
+    volumes:
+      - pgdata:/data/postgres
+
+volumes:
+  pgdata:
+    driver: local
