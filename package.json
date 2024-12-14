@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "migrate:create": "db-migrate create",
-    "migrate:up": "db-migrate up --env",
-    "migrate:down": "db-migrate down --env"
+    "migrate:up": "db-migrate up",
+    "migrate:down": "db-migrate down"
   },
   "keywords": [],
   "author": "",
