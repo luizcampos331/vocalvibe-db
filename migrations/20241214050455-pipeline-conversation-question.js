@@ -3,13 +3,11 @@
 exports.up = function (db, callback) {
   db.runSql(
     `
-    CREATE TABLE questions (
+    CREATE TABLE pipeline_conversation_questions (
       id TEXT PRIMARY KEY,
-      context TEXT NOT NULL,
-      native_language TEXT NOT NULL,
-      goal_language TEXT NOT NULL,
+      pipeline_conversation_id TEXT NOT NULL,
+      question TEXT NOT NULL,
       filename TEXT NOT NULL,
-      duration INT NOT NULL,
       created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
       updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
       deleted_at TIMESTAMPTZ
@@ -20,5 +18,5 @@ exports.up = function (db, callback) {
 };
 
 exports.down = function (db, callback) {
-  db.runSql("DROP TABLE questions;", callback);
+  db.runSql("DROP TABLE pipeline_conversation_questions;", callback);
 };
