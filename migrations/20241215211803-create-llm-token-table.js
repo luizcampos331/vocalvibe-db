@@ -19,5 +19,5 @@ exports.up = function (db, callback) {
 };
 
 exports.down = function (db, callback) {
-  db.runSql("DROP TABLE questions;", callback);
+  db.runSql("DROP TABLE llm_tokens;", callback);
 };
