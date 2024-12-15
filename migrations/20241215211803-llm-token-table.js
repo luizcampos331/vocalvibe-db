@@ -3,12 +3,12 @@
 exports.up = function (db, callback) {
   db.runSql(
     `
-    CREATE TABLE questions (
+    CREATE TABLE llm_tokens (
       id TEXT PRIMARY KEY,
-      context TEXT NOT NULL,
-      native_language TEXT NOT NULL,
-      goal_language TEXT NOT NULL,
-      filename TEXT NOT NULL,
+      entity_id TEXT NOT NULL,
+      input_tokens INT4 NOT NULL,
+      output_tokens INT4 NOT NULL,
+      entity INT4 NOT NULL,
       created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
       updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
       deleted_at TIMESTAMPTZ
