@@ -6,8 +6,8 @@ exports.up = function (db, callback) {
     CREATE TABLE pipeline_conversation_questions (
       id TEXT PRIMARY KEY,
       pipeline_conversation_id TEXT NOT NULL,
-      question TEXT NOT NULL,
-      filename TEXT NOT NULL,
+      question_id TEXT NOT NULL,
+      answered BOOLEAN NOT NULL,
       created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
       updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
       deleted_at TIMESTAMPTZ
