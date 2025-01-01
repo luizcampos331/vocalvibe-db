@@ -5,7 +5,7 @@ exports.up = function (db, callback) {
     `
     CREATE TABLE output_tasks (
       id TEXT PRIMARY KEY,
-      crew_id TEXT NOT NULL,
+      flow_id TEXT NOT NULL,
       task_id TEXT NOT NULL,
       output TEXT NOT NULL,
       created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
